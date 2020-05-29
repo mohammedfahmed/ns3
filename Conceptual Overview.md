@@ -86,7 +86,7 @@ Ipv4Address Host1Addr = internetIpIfaces.GetAddress(1);
 
 ```cpp
 Ipv4StaticRoutingHelper ipv4RoutingHelper;
-Ptr<Ipv4StaticRouting> remoteHostStaticRouting = ipv4RoutingHelper.GetStaticRouting (remoteHost->GetObject<Ipv4>());
+Ptr<Ipv4StaticRouting> HostStaticRouting = ipv4RoutingHelper.GetStaticRouting (Host->GetObject<Ipv4>());
 ```
 
 ## Create ping application
