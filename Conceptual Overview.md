@@ -24,6 +24,11 @@ Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
 - Even more operations would be required to connect multiple devices onto multipoint channels and then to connect individual networks together into internetworks. 
 - We provide topology helper objects that combine those many distinct operations into an easy to use model for your convenience.
 
+# Collect information
+
+## Logging
+
+## Tracing
 
 # Eaxamples
 
