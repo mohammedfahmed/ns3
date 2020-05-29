@@ -26,8 +26,19 @@ Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
 
 
 # Eaxamples
+## Define variables
 
-## CommandLine
+```cpp
+std::string mode = "UseBridge";
+uint16_t noEnbs = 1;
+Time simTime = Seconds(600);
+double distance = 60.0;
+string pingTarget ("10.1.1.4");
+Time interPacketInterval = MilliSeconds(100);
+bool disablePl=false; 
+```
+
+## Command Line
 ```cpp
 CommandLine cmd;
 GlobalValue::Bind ("SimulatorImplementationType", StringValue ("ns3::RealtimeSimulatorImpl"));
