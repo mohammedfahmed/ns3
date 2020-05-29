@@ -81,3 +81,11 @@ Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign(internetDevices);
 Ipv4Address Host0Addr = internetIpIfaces.GetAddress(0);
 Ipv4Address Host1Addr = internetIpIfaces.GetAddress(1);
 ```
+
+
+## Get the routing table of remote Host
+```cpp
+Ipv4StaticRoutingHelper ipv4RoutingHelper;
+Ptr<Ipv4StaticRouting> remoteHostStaticRouting = ipv4RoutingHelper.GetStaticRouting (remoteHost->GetObject<Ipv4>());
+```
+
