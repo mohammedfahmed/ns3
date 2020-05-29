@@ -19,3 +19,6 @@ Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
 ## Topology Helpers:
 - In a large simulated network you will need to arrange many connections between Nodes, NetDevices and Channels.
 - Since connecting NetDevices to Nodes, NetDevices to Channels, assigning IP addresses, etc., are such common tasks in ns-3, we provide what we call topology helpers to make this as easy as possible.
+- For example, it may take many distinct ns-3 core operations to create a NetDevice, add a MAC address, install that net device on a Node, configure the node’s protocol stack, and then connect the NetDevice to a Channel. 
+- Even more operations would be required to connect multiple devices onto multipoint channels and then to connect individual networks together into internetworks. 
+- We provide topology helper objects that combine those many distinct operations into an easy to use model for your convenience.
