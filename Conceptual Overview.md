@@ -17,3 +17,5 @@ Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
 - The CsmaNetDevice is designed to work with a CsmaChannel; the PointToPointNetDevice is designed to work with a PointToPointChannel and a WifiNetNevice is designed to work with a WifiChannel.
 
 ## Topology Helpers:
+- In a large simulated network you will need to arrange many connections between Nodes, NetDevices and Channels.
+- Since connecting NetDevices to Nodes, NetDevices to Channels, assigning IP addresses, etc., are such common tasks in ns-3, we provide what we call topology helpers to make this as easy as possible.
