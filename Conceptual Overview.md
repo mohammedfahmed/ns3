@@ -58,11 +58,21 @@ cmd.Parse (argc,argv);
   Config::SetDefault ("ns3::LteHelper::PathlossModel", StringValue ("ns3::FriisSpectrumPropagationLossModel"));
   ```
   
-## Create remote host
+## Create host
 ```cpp
-NodeContainer remoteHostContainer;
-remoteHostContainer.Create(1);
-Ptr<Node> remoteHost = remoteHostContainer.Get (0);
+NodeContainer HostContainer;
+HostContainer.Create(1);
+Ptr<Node> Host = HostContainer.Get (0);
 InternetStackHelper internet;
-internet.Install (remoteHostContainer);
+internet.Install (HostContainer);
+```
+
+## Connect two hosts
+
+```cpp
+PointToPointHelper p2ph;
+p2ph.SetDeviceAttribute("DataRate", DataRateValue(DataRate("10Gb/s")));
+p2ph.SetDeviceAttribute("Mtu",UintegerValue(1500));
+p2ph.SetChannelAttribute("Delay",TimeValue(MilliSeconds(10)));
+NetDeviceContainer internetDevices = p2ph.Install (Host1, Host2);
 ```
