@@ -58,4 +58,11 @@ cmd.Parse (argc,argv);
   Config::SetDefault ("ns3::LteHelper::PathlossModel", StringValue ("ns3::FriisSpectrumPropagationLossModel"));
   ```
   
-
+## Create remote host
+```cpp
+NodeContainer remoteHostContainer;
+remoteHostContainer.Create(1);
+Ptr<Node> remoteHost = remoteHostContainer.Get (0);
+InternetStackHelper internet;
+internet.Install (remoteHostContainer);
+```
