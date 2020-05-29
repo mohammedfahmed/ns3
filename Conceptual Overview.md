@@ -9,6 +9,7 @@ Examples: UdpEchoClientApplication, UdpEchoServerApplication
 
 ## Channel 
 Examples: CsmaChannel(Ethernet-like), PointToPointChannel, WifiChannel
+- A real Ethernet uses CSMA/CD (Carrier Sense Multiple Access with Collision Detection) scheme with exponentially increasing backoff to contend for the shared transmission medium. The ns-3 CSMA device and channel models only a subset of this.
 
 ## NetDevice 
 Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
