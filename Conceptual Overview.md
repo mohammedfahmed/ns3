@@ -47,3 +47,15 @@ cmd.AddValue ("simTime", "Total duration of the simulation", simTime);
 cmd.Parse (argc,argv);
 ```
 
+
+
+
+## Default configuration
+
+```cpp
+  Config::SetDefault ("ns3::LteSpectrumPhy::CtrlErrorModelEnabled", BooleanValue (false));
+  Config::SetDefault ("ns3::RrFfMacScheduler::HarqEnabled", BooleanValue (false));
+  Config::SetDefault ("ns3::LteHelper::PathlossModel", StringValue ("ns3::FriisSpectrumPropagationLossModel"));
+  ```
+  
+
