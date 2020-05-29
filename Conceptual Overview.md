@@ -1,6 +1,8 @@
 # Key Abstractions
 
 ## Node:
+- In ns-3 the basic computing device abstraction is called the node. 
+- The Node class provides methods for managing the representations of computing devices in simulations.
 
 ## Application 
 Examples: UdpEchoClientApplication, UdpEchoServerApplication
