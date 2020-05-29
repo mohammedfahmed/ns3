@@ -26,6 +26,7 @@ Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
 
 
 # Eaxamples
+
 ## Define variables
 
 ```cpp
@@ -47,9 +48,6 @@ cmd.AddValue ("simTime", "Total duration of the simulation", simTime);
 cmd.Parse (argc,argv);
 ```
 
-
-
-
 ## Default configuration
 
 ```cpp
@@ -59,6 +57,7 @@ cmd.Parse (argc,argv);
   ```
   
 ## Create host
+
 ```cpp
 NodeContainer HostContainer;
 HostContainer.Create(1);
@@ -84,8 +83,20 @@ Ipv4Address Host1Addr = internetIpIfaces.GetAddress(1);
 
 
 ## Get the routing table of remote Host
+
 ```cpp
 Ipv4StaticRoutingHelper ipv4RoutingHelper;
 Ptr<Ipv4StaticRouting> remoteHostStaticRouting = ipv4RoutingHelper.GetStaticRouting (remoteHost->GetObject<Ipv4>());
+```
+
+## Create ping application
+
+```cpp
+Ptr<V4Ping> app = CreateObject<V4Ping> ();
+app->SetAttribute ("Remote", Ipv4AddressValue (externalUE));
+app->SetAttribute ("Verbose", BooleanValue (true) );
+remoteHost->AddApplication (app);
+app->SetStartTime (Seconds (1.0));
+app->SetStopTime (Seconds (120.0));
 ```
 
