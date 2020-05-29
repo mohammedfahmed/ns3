@@ -74,8 +74,10 @@ PointToPointHelper p2ph;
 p2ph.SetDeviceAttribute("DataRate", DataRateValue(DataRate("10Gb/s")));
 p2ph.SetDeviceAttribute("Mtu",UintegerValue(1500));
 p2ph.SetChannelAttribute("Delay",TimeValue(MilliSeconds(10)));
-NetDeviceContainer internetDevices = p2ph.Install (Host1, Host2);
+NetDeviceContainer internetDevices = p2ph.Install (Host0, Host1);
 Ipv4AddressHelper ipv4h;
 ipv4h.SetBase ("10.1.2.0", "255.255.255.0");
 Ipv4InterfaceContainer internetIpIfaces = ipv4h.Assign(internetDevices);
+Ipv4Address Host0Addr = internetIpIfaces.GetAddress(0);
+Ipv4Address Host1Addr = internetIpIfaces.GetAddress(1);
 ```
