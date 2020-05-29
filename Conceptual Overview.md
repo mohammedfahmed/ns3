@@ -23,3 +23,16 @@ Examples: CsmaNetDevice, PointToPointNetDevice, WifiNetDevice
 - For example, it may take many distinct ns-3 core operations to create a NetDevice, add a MAC address, install that net device on a Node, configure the node’s protocol stack, and then connect the NetDevice to a Channel. 
 - Even more operations would be required to connect multiple devices onto multipoint channels and then to connect individual networks together into internetworks. 
 - We provide topology helper objects that combine those many distinct operations into an easy to use model for your convenience.
+
+
+# Eaxamples
+
+## CommandLine
+```cpp
+CommandLine cmd;
+GlobalValue::Bind ("SimulatorImplementationType", StringValue ("ns3::RealtimeSimulatorImpl"));
+cmd.AddValue("noEnbs","Number of eNodeBs", noEnbs);
+cmd.AddValue ("simTime", "Total duration of the simulation", simTime);
+cmd.Parse (argc,argv);
+```
+
