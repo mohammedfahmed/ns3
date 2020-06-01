@@ -1,6 +1,10 @@
 # Basic Components
 ## Nodes
 ## Net Device
+
+- Network Devices transfer packets over channels 
+- It incorporates Layer-1 (PHY) and Layer-2 (MAC)
+
 ## Channels
 ## Application
 ## Protocol Stack
