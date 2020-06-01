@@ -4,6 +4,8 @@
 ```cpp
 Ptr<Node> n= CreateObject<Node>();
 ```
+TEMPLATE function ```CreateObject<>``` 
+Reference Counting Smart Pointer ```Ptr<>```
 
 - using Helper Class
 ```cpp
