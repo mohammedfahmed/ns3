@@ -1,3 +1,30 @@
+# core
+## Smart pointers
+## Dynamic types
+## Attributes
+## Callbacks
+## Tracing
+## Logging
+## Random Variables
+## Events
+## Scheduler
+## Time arithmetic
+
+
+# network
+## Node class
+## NetDevice ABC
+## Address types
+## (Ipv4, MAC, etc.)
+## Queues
+## Socket ABC
+## Ipv4 ABCs
+## Packet sockets
+## Packets
+## Packet Tags
+## Packet Headers
+## Pcap/ascii file writing
+
 # Key Abstractions
 
 ## Node:
