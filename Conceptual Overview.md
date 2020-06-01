@@ -2,7 +2,7 @@
 ## Create Node
 - using Node class
 ```cpp
-Ptr<Node> n= CreateObject<Node>();
+Ptr<Node> n = CreateObject<Node>();
 ```
 where ```CreateObject<>``` is a template function and ```Ptr<>``` Reference Counting Smart Pointer
 
