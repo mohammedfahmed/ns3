@@ -4,6 +4,9 @@
 
 - Network Devices transfer packets over channels 
 - It incorporates Layer-1 (PHY) and Layer-2 (MAC)
+- Devices interface with Layer-3 (Network)
+- Layer-3 supports Layer-4 (Transport)
+- Layer-4 is used by Layer-5
 
 ## Channels
 ## Application
