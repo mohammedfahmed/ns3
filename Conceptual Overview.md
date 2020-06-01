@@ -1,3 +1,10 @@
+# Flow Chart
+## Create Node
+## Attach NetDeive and Channel [NODES]
+##  Install Protocol Stack [NODES]
+## Assign Ip Address [NETDEVICE]
+## Install Application [NODES]
+
 # Basic Components
 ## Nodes
 ## Net Device
