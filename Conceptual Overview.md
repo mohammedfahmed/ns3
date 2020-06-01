@@ -7,6 +7,7 @@
 - Devices interface with Layer-3 (Network)
 - Layer-3 supports Layer-4 (Transport)
 - Layer-4 is used by Layer-5
+- Net Device are strongly bound to Channels of a matching type
 
 ## Channels
 ## Application
