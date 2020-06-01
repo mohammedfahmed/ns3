@@ -1,5 +1,16 @@
 # Flow Chart
 ## Create Node
+- using Node class
+```cpp
+Ptr<Node> n= CreateObject<Node>();
+```
+
+- using Helper Class
+```cpp
+NodeContainer nc;
+nc.Create(3);
+```
+
 ## Attach NetDeive and Channel [NODES]
 ##  Install Protocol Stack [NODES]
 ## Assign Ip Address [NETDEVICE]
