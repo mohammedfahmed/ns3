@@ -38,6 +38,32 @@ build a set of FdNetDevice objects attached to a virtual TAP network interface
 ## TapFdNetDeviceHelper
 build a set of FdNetDevice objects attached to a virtual TAP network interface  
 
+## Example
+```cpp
+NS_LOG_INFO ("Create Node");
+Ptr<Node> node = CreateObject<Node> ();
+
+NS_LOG_INFO ("Create Device");
+EmuFdNetDeviceHelper emu;
+emu.SetDeviceName (deviceName);
+NetDeviceContainer devices = emu.Install (node);
+Ptr<NetDevice> device = devices.Get (0);
+device->SetAttribute ("Address", localMac);
+
+NS_LOG_INFO ("Add Internet Stack");
+InternetStackHelper internetStackHelper;
+internetStackHelper.SetIpv4StackInstall(true);
+internetStackHelper.Install (node);
+
+NS_LOG_INFO ("Create IPv4 Interface");
+Ptr<Ipv4> ipv4 = node->GetObject<Ipv4> ();
+uint32_t interface = ipv4->AddInterface (device);
+Ipv4InterfaceAddress address = Ipv4InterfaceAddress (localIp, localMask);
+ipv4->AddAddress (interface, address);
+ipv4->SetMetric (interface, 1);
+ipv4->SetUp (interface);
+```
+
 # Basic Components
 
 ## Nodes
