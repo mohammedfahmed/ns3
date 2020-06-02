@@ -21,22 +21,22 @@ nc.Create(3);
 # fd-net-device module
 
 ## EmuFdNetDeviceHelper
- 	build a set of FdNetDevice objects attached to a physical network interface  
+build a set of FdNetDevice objects attached to a physical network interface  
  
 ## FdNetDevice
- 	a NetDevice to read/write network traffic from/into a file descriptor.  
+a NetDevice to read/write network traffic from/into a file descriptor.  
  
 ## FdNetDeviceFdReader
- 	This class performs the actual data reading from the sockets.  
+This class performs the actual data reading from the sockets.  
  
 ## FdNetDeviceHelper
- 	build a set of FdNetDevice objects Normally we eschew multiple inheritance, however, the classes PcapUserHelperForDevice and AsciiTraceUserHelperForDevice are treated as "mixins". A mixin is a self-contained class that encapsulates a general attribute or a set of functionality that may be of interest to many other classes.  
+build a set of FdNetDevice objects Normally we eschew multiple inheritance, however, the classes PcapUserHelperForDevice and AsciiTraceUserHelperForDevice are treated as "mixins". A mixin is a self-contained class that encapsulates a general attribute or a set of functionality that may be of interest to many other classes.  
  
 ## PlanetLabFdNetDeviceHelper
- 	build a set of FdNetDevice objects attached to a virtual TAP network interface  
+build a set of FdNetDevice objects attached to a virtual TAP network interface  
  
 ## TapFdNetDeviceHelper
- 	build a set of FdNetDevice objects attached to a virtual TAP network interface  
+build a set of FdNetDevice objects attached to a virtual TAP network interface  
 
 # Basic Components
 
